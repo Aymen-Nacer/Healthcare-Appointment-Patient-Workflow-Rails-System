@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch("POSTGRES_USER", "postgres") %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD", "postgres") %>
+  host: <%= ENV.fetch("POSTGRES_HOST", "localhost") %>
+  port: <%= ENV.fetch("POSTGRES_PORT", 5432) %>
+
+development:
+  <<: *default
+  database: healthcare_appointment_dev
+
+test:
+  <<: *default
+  database: healthcare_appointment_test
+
+production:
+  <<: *default
+  database: <%= ENV.fetch("POSTGRES_DB", "healthcare_appointment_prod") %>

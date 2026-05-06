@@ -1,0 +1,9 @@
+log/*
+tmp/*
+!tmp/pids
+!tmp/pids/.keep
+storage/*
+.git
+.bundle
+vendor/bundle
+node_modules
