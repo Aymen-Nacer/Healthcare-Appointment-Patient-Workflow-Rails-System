@@ -1,4 +1,4 @@
-# Healthcare Appointment System — Ruby on Rails + PostgreSQL
+# Healthcare Appointment System — Ruby on Rails 
 
 A full-stack healthcare workflow system demonstrating the complete appointment lifecycle:
 
